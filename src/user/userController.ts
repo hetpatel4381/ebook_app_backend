@@ -79,7 +79,7 @@ const loginUser = async (req: Request, res: Response, next: NextFunction) => {
       message: "User Logged In Successfully!",
     });
   } catch (error) {
-    return next(createHttpError(500, "Error while Login In"));
+    return next(createHttpError(500, "Error while Login In User!"));
   }
 };
 
