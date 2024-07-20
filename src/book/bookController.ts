@@ -195,9 +195,6 @@ const deleteBook = async (req: Request, res: Response, next: NextFunction) => {
       resource_type: "raw",
     });
 
-    console.log(coverImagePublicId);
-    console.log(filePublicId);
-
     const deletedBook = await bookModel.deleteOne({ _id: book._id });
 
     return res.status(204).json({ deletedBook });
