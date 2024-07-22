@@ -47,7 +47,7 @@ const createBook = async (req: Request, res: Response, next: NextFunction) => {
       title,
       genre,
       description,
-      author: _req.userId,
+      author: { name: _req.name, _id: _req.userId },
       coverImage: uploadCoverImage.secure_url,
       file: uploadBookFile.secure_url,
     });

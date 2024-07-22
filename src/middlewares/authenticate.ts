@@ -5,6 +5,7 @@ import { config } from "../config/config";
 
 export interface AuthRequest extends Request {
   userId: string;
+  name: string;
 }
 
 const authenticate = (req: Request, res: Response, next: NextFunction) => {
